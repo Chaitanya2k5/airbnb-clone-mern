@@ -1,0 +1,92 @@
+.my-properties-page {
+  min-height: 100vh;
+
+ background:
+  linear-gradient(
+    rgba(255,255,255,0.15),
+    rgba(255,255,255,0.15)
+  ),
+  url("https://images.unsplash.com/photo-1560448204-e02f11c3d0e2");
+
+  background-size: cover;
+  background-position: center;
+
+  padding: 30px;
+}
+
+.my-properties-container {
+  max-width: 1000px;
+  margin: auto;
+}
+
+.my-properties-title {
+  text-align: center;
+  color: white;
+  font-size: 42px;
+  margin-bottom: 10px;
+}
+
+.property-count {
+  text-align: center;
+  color: white;
+  margin-bottom: 30px;
+}
+
+.property-card {
+  background: rgba(255, 255, 255, 0.15);
+
+  backdrop-filter: blur(15px);
+  -webkit-backdrop-filter: blur(15px);
+
+  border: 1px solid rgba(255,255,255,0.3);
+
+  border-radius: 20px;
+
+  padding: 25px;
+
+  margin-bottom: 25px;
+
+  color: white;
+
+  box-shadow: 0 8px 30px rgba(0,0,0,0.25);
+}
+
+.edit-btn {
+  background: #ff385c;
+  color: white;
+  border: none;
+  padding: 10px 15px;
+  border-radius: 8px;
+  cursor: pointer;
+  margin-right: 10px;
+}
+
+.delete-btn {
+  background: #dc3545;
+  color: white;
+  border: none;
+  padding: 10px 15px;
+  border-radius: 8px;
+  cursor: pointer;
+}
+
+.home-btn {
+  background: #ff385c;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 10px;
+  cursor: pointer;
+  margin-bottom: 20px;
+}
+
+.property-card h2 {
+  color: white;
+  font-size: 28px;
+  margin-bottom: 15px;
+}
+
+.property-card p {
+  color: rgba(255,255,255,0.9);
+  font-size: 16px;
+}

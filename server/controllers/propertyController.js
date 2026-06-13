@@ -106,10 +106,25 @@ const deleteProperty = async (req, res) => {
   }
 };
 
+const getMyProperties = async (req, res) => {
+  try {
+    const properties = await Property.find({
+      owner: req.user._id,
+    });
+
+    res.json(properties);
+  } catch (error) {
+    res.status(500).json({
+      message: error.message,
+    });
+  }
+};
+
 module.exports = {
   createProperty,
   getProperties,
   getPropertyById,
   updateProperty,
   deleteProperty,
+  getMyProperties,
 };
