@@ -1,5 +1,6 @@
 import { useEffect, useState } from "react";
 import axios from "axios";
+import API from "../api";
 import { Link } from "react-router-dom";
 import { useNavigate } from "react-router-dom";
 import "./MyProperties.css";
@@ -15,7 +16,7 @@ function MyProperties() {
         console.log("TOKEN:", token);
 
         const res = await axios.get(
-          "http://localhost:5000/api/properties/my-properties",
+          `${API}/api/properties/my-properties`,
           {
             headers: {
               Authorization: `Bearer ${token}`,
@@ -39,7 +40,7 @@ function MyProperties() {
     const token = localStorage.getItem("token");
 
     await axios.delete(
-      `http://localhost:5000/api/properties/${id}`,
+      `${API}/api/properties/${id}`,
       {
         headers: {
           Authorization: `Bearer ${token}`,

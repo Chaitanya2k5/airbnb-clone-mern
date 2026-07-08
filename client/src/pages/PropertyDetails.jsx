@@ -1,6 +1,7 @@
 import { useEffect, useState } from "react";
 import { useParams, useNavigate } from "react-router-dom";
 import axios from "axios";
+import API from "../api";
 
 function PropertyDetails() {
   const { id } = useParams();
@@ -12,7 +13,7 @@ function PropertyDetails() {
     const fetchProperty = async () => {
       try {
         const res = await axios.get(
-          `http://localhost:5000/api/properties/${id}`
+          `${API}/api/properties/${id}`
         );
 
         setProperty(res.data);
@@ -36,7 +37,7 @@ function PropertyDetails() {
       };
 
       await axios.post(
-  "http://localhost:5000/api/bookings",
+  `${API}/api/bookings`,
   bookingData,
   {
     headers: {

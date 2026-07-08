@@ -1,5 +1,6 @@
 import { useEffect, useState } from "react";
 import axios from "axios";
+import API from "../api";
 
 import Navbar from "../components/Navbar";
 import Footer from "../components/Footer";
@@ -14,8 +15,8 @@ function Home() {
     const fetchProperties = async () => {
       try {
         const res = await axios.get(
-          "http://localhost:5000/api/properties"
-        );
+  `${API}/api/properties`
+);
 
         setProperties(res.data);
       } catch (error) {

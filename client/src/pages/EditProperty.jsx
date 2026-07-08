@@ -1,6 +1,7 @@
 import { useEffect, useState } from "react";
 import { useParams, useNavigate } from "react-router-dom";
 import axios from "axios";
+import API from "../api";
 
 function EditProperty() {
   const { id } = useParams();
@@ -16,7 +17,7 @@ function EditProperty() {
     const fetchProperty = async () => {
       try {
         const res = await axios.get(
-          `http://localhost:5000/api/properties/${id}`
+          `${API}/api/properties/${id}`
         );
 
         setTitle(res.data.title);
@@ -39,7 +40,7 @@ function EditProperty() {
       const token = localStorage.getItem("token");
 
       await axios.put(
-        `http://localhost:5000/api/properties/${id}`,
+        `${API}/api/properties/${id}`,
         {
           title,
           description,

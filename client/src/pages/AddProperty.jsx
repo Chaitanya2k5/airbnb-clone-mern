@@ -1,5 +1,6 @@
 import { useState } from "react";
 import axios from "axios";
+import API from "../api";
 import { useNavigate } from "react-router-dom";
 import "./AddProperty.css";
 
@@ -26,7 +27,7 @@ function AddProperty() {
       };
 
       const res = await axios.post(
-        "http://localhost:5000/api/properties",
+        `${API}/api/properties`,
         propertyData,
         {
           headers: {

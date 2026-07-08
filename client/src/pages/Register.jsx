@@ -1,5 +1,6 @@
 import { useState } from "react";
 import axios from "axios";
+import API from "../api";
 import { useNavigate } from "react-router-dom";
 import { FaEye, FaEyeSlash } from "react-icons/fa";
 
@@ -15,7 +16,7 @@ function Register() {
 
     try {
       const res = await axios.post(
-        "http://localhost:5000/api/users/register",
+        `${API}/api/users/register`,
         {
           name,
           email,

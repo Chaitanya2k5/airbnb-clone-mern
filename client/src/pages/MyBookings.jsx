@@ -1,5 +1,6 @@
 import { useEffect, useState } from "react";
 import axios from "axios";
+import API from "../api";
 import { useNavigate } from "react-router-dom";
 import "./MyBookings.css";
 
@@ -13,7 +14,7 @@ function MyBookings() {
         const token = localStorage.getItem("token");
 
         const res = await axios.get(
-          "http://localhost:5000/api/bookings/my-bookings",
+          `${API}/api/bookings/my-bookings`,
           {
             headers: {
               Authorization: `Bearer ${token}`,
